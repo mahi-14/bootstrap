@@ -1,0 +1,243 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Food</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <!--favicon link-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!--bootstrap link-->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+<!--email js link-->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("rkjIn0o0lAgKVJSCq");
+})();
+</script>
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="images/logo.jpg"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#"  style="color:white;font-size:18px;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#packages"  style="color:white;font-size:18px;">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#contact" style="color:white;font-size:18px;">Contact Us</a>
+                        </li>
+                    </ul>
+              </div>
+            </div>
+          </nav>
+          <!--navbar/-->
+          <!--banner-->
+          <!--modal-->
+          <div class="modal fade" tabindex="-1" id="booking-modal" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Join a Course</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+      
+                  <!-- FORM -->
+                  <form>
+                    <div class="row g-2">
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input class="form-control" id="#email-input" type="email" placeholder="name@example.com">
+                          <label class="form-label" for="email-input">Email address</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <select id="floating-select" class="form-select">
+                            <option>Location</option>
+                            <option>Punjab</option>
+                            <option>Chandigarh</option>
+                          </select>
+                          <label for="floating-select">Select your location</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+      
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--modal/-->
+          <div class="container-fluid">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item c-item">
+                  <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 c-img" alt="Carousel image 1">
+                  <div class="carousel-caption top-0 mt-4">
+                    <p class="mt-5 text-uppercase fs-3">The Fastest Delivery in</p>
+                    <h1 class="display-1 fw-bold">Your City</h1>
+                    <button class="btn btn-dark mt-5 fs-5 px-4 py-2" data-bs-toggle="modal" data-bs-target="#booking-modal">Order Now</button>
+                  </div>
+                </div>
+                <div class="carousel-item c-item active">
+                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 c-img" alt="Carousel image 2">
+                  <div class="carousel-caption top-0 mt-4">
+                    <p class="text-uppercase fs-3 mt-5">The Fastest Delivery in</p>
+                    <p class="display-1 fw-bold text-capitalize">Your City</p>
+                    <button class="btn btn-dark px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Order Now</button>
+                  </div>
+                </div>
+                <div class="carousel-item c-item">
+                  <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 c-img" alt="Carousel image 3">
+                  <div class="carousel-caption top-0 mt-4">
+                    <p class="text-uppercase fs-3 mt-5">The Fastest Delivery in</p>
+                    <p class="display-1 fw-bold text-capitalize">Your City</p>
+                    <button class="btn btn-dark px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Order Now</button>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </div>
+          <!--banner/-->
+          <!--container-->
+          <section class="pt-md-5" id="packages">
+            <div class="container">
+              <h2 class="text-center my-5">Our Fresh & Healthy Food</h2>
+      
+              <div class="row gy-4">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pizza</h5>
+                      <p class="card-text">In Italy, pizza served in a restaurant is presented unsliced, and is eaten with the use of a knife and fork.[2][3] In casual settings, however, it is cut into wedges to be eaten while held in the hand.</p>
+                      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#booking-modal">Order Now
+                        </button>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-4">
+                  <div class="card">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Burger</h5>
+                      <p class="card-text">A sandwich consisting of a bun, a cooked beef patty, and often other ingredients such as cheese, onion slices, lettuce, or condiments  Although this mode of consumption must be as old as meat and bread</p>
+                      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#booking-modal">Order
+                        Now</button>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-4">
+                  <div class="card">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sandwich</h5>
+                      <p class="card-text">Any type of roll or bread and any type of food that can be conveniently so eaten can go into a sandwich, hot or cold. British tea sandwiches are made with thin-cut bread filled with fish paste or tomato. </p>
+                      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#booking-modal">Order
+                        Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <div class="row row-cols-1 row-cols-md-2 g-4 mx-5">
+            <div class="col">
+              <div class="card mt-5 animate">
+                <img src="https://plus.unsplash.com/premium_photo-1661769051073-9455a2529468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mt-5 animate">
+                <img src="https://images.unsplash.com/photo-1574085733277-851d9d856a3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" class="card-img-top" alt="...">  
+              </div>
+            </div>
+          </div>
+
+          <div class="container" id="contact">
+            <h2 class="text-center my-5">Contact Us</h2>
+          </div>
+          <form class="mx-5 mt-5">
+                    <div class="form-group my-3">
+                        <h5 for="name">Name</h5>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group my-3">
+                        <h5 for="email">Email</h5>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group my-3">
+                        <h5 for="message">Message</h5>
+                        <textarea id="message" rows="3" class="form-control"></textarea>
+                    </div>
+                    <button class="btn btn-dark my-3" onclick="sendMail()">Submit</button>
+          </form>
+          <!--container/-->
+          <!--footer-->
+          <nav class="navbar navbar-light bg-dark mt-5">
+            <div class="container">
+              <a class="navbar-brand" href="https://www.instagram.com/">
+                <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" width="30" height="24">
+              </a>
+              <a class="navbar-brand" href="https://twitter.com/?lang=en-in">
+                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" width="30" height="24">
+              </a>
+              <a class="navbar-brand" href="https://www.facebook.com/">
+                <img src="https://images.unsplash.com/photo-1627843563095-f6e94676cfe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="" width="30" height="24">
+              </a>
+            </div>
+          </nav>
+          <nav>
+            <div class="container-fluid bg-dark text-light">
+              <div class="row text-center">
+                <div class="col my-3">
+                    Copyright & copy : 2022 www.gofoodie.com-All rights reserved
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!--footer/-->
+
+    </body>
+</html>
